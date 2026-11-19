@@ -114,7 +114,7 @@ Auth results : {'spf': 'fail', 'dkim': 'none', 'dmarc': 'fail'}
 ## 🧹 Step 6: Contain & Scope
 
 1. **Who else got it?** Run a message trace by sender, subject and URL across the tenant.
-2. **Purge** it from every mailbox (Microsoft 365: `Search-Mailbox` / *Threat Explorer → Soft delete*).
+2. **Purge** it from every mailbox (Microsoft 365: *Threat Explorer → Take action → Soft delete*, or `New-ComplianceSearchAction -Purge`).
 3. **Block** the sender, domain, URLs and hashes at the email gateway, proxy/DNS and EDR.
 4. **Who clicked?** Check proxy / DNS logs for the phishing domain.
 5. **Who submitted credentials?** Reset passwords, **revoke sessions**, check MFA, review sign-in logs.
